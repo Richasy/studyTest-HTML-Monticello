@@ -1,0 +1,636 @@
+﻿html{
+    font-size:62.5%;
+}
+.head{
+    position:relative;
+    z-index:0;
+    height:1300px;
+}
+
+/*head背景设置*/
+/*bg-0 -- 渐变背景*/
+/*bg-1 -- 浮雕建筑背景*/
+/*bg-line -- 线条*/
+
+.bg-0,.bg-1,.bg-line{
+    position:absolute;
+    width:1920px;
+}
+.bg-0{
+    z-index:-1;
+}
+.bg-1{
+    z-index:0;
+}
+.bg-line {
+    z-index: 1;
+    height: 960px;
+}
+
+/*container容器设置，在absolute情况下居中*/
+
+.head-container {
+    max-width: 1170px;
+    margin: auto;
+    position: absolute;
+    z-index: 2;
+    text-align:center;
+    display:block;
+    top:0;left:0;right:0;bottom:0;
+}
+
+/*导航栏设置*/
+/*所有ul采用flex弹性布局，space-around分配空间*/
+/*li标签下图片不能很好的垂直居中*/
+
+nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    margin-top:67px;
+}
+nav ul{
+    display:flex;
+    justify-content:space-around;
+    list-style:none;
+    align-content:center;
+}
+#nav-title{
+    width:590px;
+}
+#nav-title #projects,#news,#contact{
+    background:url(../img/nav-circle.png) no-repeat left center;
+}
+#nav-title #about-us{
+    background:url(../img/nav-circle-fill.png) no-repeat left center;
+}
+#nav-title a{
+    margin-left:20px;
+    font-size:1.4rem;
+    font-family:Gilroy;
+    text-decoration:none;
+    color:white;
+    letter-spacing:1px;
+}
+#nav-icon li{
+    margin-left:30px;
+    border:1px solid white;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+}
+#nav-icon img{
+    margin-top:7px;
+    vertical-align:middle;
+}
+
+/*head内容设置，包括一级标题和副标题*/
+
+.title-group h1{
+    font-size:8rem;
+    color:white;
+    font-family:Gotham;
+    margin-top:150px;
+    margin-bottom:0;
+}
+.title-group h2{
+    font-size:1.8rem;
+    font-weight:normal;
+    font-family:Gotham;
+    color:white;
+    margin-top:30px;
+    margin-bottom:0;
+    letter-spacing:4px;
+}
+.title-group div{
+    display:block;
+    margin:auto;
+    width:40px;
+    height:40px;
+    border:1px solid white;
+    border-radius:50%;
+    margin-top:60px;
+    cursor:pointer;
+}
+.title-group div:hover{
+    background-color:rgba(255, 255, 255, 0.3);
+}
+.title-group div img{
+    margin-top:18px;
+}
+
+/*float-block布局设置*/
+.float-block {
+    margin: 0 auto;
+    display: flex;
+    position: absolute;
+    margin-top: 150px;
+}
+
+/*intro设置*/
+
+.float-block .intro {
+    background-color: #2c4058;
+    width:570px;
+    height:335px;
+    padding-left:50px;
+    padding-top:65px;
+    margin-top:70px;
+}
+.float-block .intro p{
+    color:white;
+    font-size:1.8rem;
+    line-height:1.5;
+    font-family:Gilroy;
+    text-align:left;
+    width:400px;
+    height:165px;
+    overflow:hidden;
+}
+.float-block .intro .play{
+    width:235px;
+    height:auto;
+    display:flex;
+    margin-top:50px;
+    align-items:center;
+}
+.play .play-info{
+    text-align:left;
+    margin-left:20px;
+}
+.play img{
+    cursor:pointer;
+}
+.play img:hover{
+    background-color:rgba(255, 255, 255, 0.40);
+}
+.play .play-info p{
+    font-size:1.8rem;
+    margin:0;
+    width:200px;
+    height:auto;
+}
+.play .play-info #play-title{
+    margin:0;
+    font-weight:600;
+    font-size:2.2rem;
+}
+
+/*float-block下的image处理*/
+.float-block .image{
+    z-index:4;
+    margin-left:-70px;
+}
+
+/*project设置*/
+.project{
+    position:relative;
+    z-index:0;
+}
+.project-container {
+    max-width: 1170px;
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+
+/*project上划线设置*/
+.project .top-line{
+    border-top:1px solid #2c4058;
+    width:80px;
+    height:10px;
+    margin:0 auto;
+}
+
+/*project 标题设置*/
+.project h3{
+    font-size:4.4rem;
+    font-weight:600;
+    font-family:Gotham;
+    margin:20px 0 0 0;
+}
+
+/*project-filter通用设置*/
+
+.project .filter{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    margin-top:60px;
+}
+#filter-1,#filter-2,#filter-3,#filter-4,#filter-5{
+    width:190px;
+    height:190px;
+    background:white;
+}
+.filter .line{
+    width:30px;
+    border-bottom:1px solid #2c4058;
+    margin:25px auto 15px;
+}
+.filter h5{
+    font-family:Gotham;
+    font-weight:normal;
+    font-size:1.8rem;
+}
+
+/*project1设置*/
+.project .project1{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:100px;
+}
+
+/*protect1图片区底衬设置*/
+.project .project1-image .project1-block {
+    position:absolute;
+    z-index:-1;
+    width: 585px;
+    height: 470px;
+    background: #55b7ff;
+    margin-top:-540px;
+    margin-left:-300px;
+}
+
+/*project1文字区设置*/
+.project .project1-content{
+    text-align:left;
+    margin-left:80px;
+}
+.project .project1-content h5{
+    font-size:1.8rem;
+    font-family:Gotham;
+    font-weight:normal;
+    padding:0;
+    margin:0 0 10px 0;
+}
+.project .project1-content h3{
+    font-family:Gotham;
+    font-size:4.4rem;
+    margin:0 0 30px 0;
+}
+.project .project1-content p{
+    font-family:'Microsoft YaHei UI';
+    font-size:1.5rem;
+    line-height:1.8;
+    width:430px;
+    color:#626262;
+}
+.project .project1-content button {
+    width: 190px;
+    height: 50px;
+    font-family: Gotham;
+    font-size: 1.4rem;
+    border: 1px solid #2c4058;
+    background:none;
+    margin-top:30px;
+    outline:none;
+}
+.project .project1-content a{
+    display:block;
+    background:url(../img/ico-place.png) no-repeat left center;
+    padding-left:22px;
+    font-size:1.4rem;
+    color:#808080;
+    font-family:'Microsoft YaHei UI';
+    margin-top:50px;
+}
+
+/*project2设置*/
+.project .project2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+}
+
+/*protect2图片区底衬设置*/
+.project .project2-image .project2-block {
+    position: absolute;
+    z-index: -1;
+    width: 585px;
+    height: 470px;
+    background: #7e5aff;
+    margin-top: -540px;
+    margin-left: 300px;
+}
+
+/*project2文字区设置*/
+.project .project2-content {
+    text-align: left;
+    margin-right: 80px;
+}
+
+    .project .project2-content h5 {
+        font-size: 1.8rem;
+        font-family: Gotham;
+        font-weight: normal;
+        padding: 0;
+        margin: 0 0 10px 0;
+    }
+
+    .project .project2-content h3 {
+        font-family: Gotham;
+        font-size: 4.4rem;
+        margin: 0 0 30px 0;
+        width:470px;
+    }
+
+    .project .project2-content p {
+        font-family: 'Microsoft YaHei UI';
+        font-size: 1.5rem;
+        line-height: 1.8;
+        width: 430px;
+        color: #626262;
+    }
+
+    .project .project2-content button {
+        width: 190px;
+        height: 50px;
+        font-family: Gotham;
+        font-size: 1.4rem;
+        border: 1px solid #2c4058;
+        background: none;
+        margin-top: 30px;
+        outline: none;
+    }
+
+    .project .project2-content a {
+        display: block;
+        background: url(../img/ico-place.png) no-repeat left center;
+        padding-left: 22px;
+        font-size: 1.4rem;
+        color: #808080;
+        font-family: 'Microsoft YaHei UI';
+        margin-top: 50px;
+    }
+
+/*news区设置*/
+
+.news{
+    margin-top:200px;
+    position:relative;
+    height:1300px;
+    z-index:0;
+}
+#news-bg{
+    position:absolute;
+    z-index:-1;
+    width:1920px;
+}
+.news-container {
+    max-width: 1600px;
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+
+/*news标题区设置*/
+
+.news-title{
+    height:100px;
+    padding-top:250px;
+}
+.news-title .top-line{
+    border-top:1px solid white;
+    width:80px;
+    height:10px;
+    margin:0 auto;
+}
+.news-title h3{
+    font-size:4.4rem;
+    font-weight:600;
+    font-family:Gotham;
+    margin:20px 0 0 0;
+    color:white;
+}
+
+/*news内容主区设置*/
+
+.news-cover{
+    display:flex;
+    margin-top:50px;
+    justify-content:center;
+    align-items:center;
+    text-align:left;
+}
+#news-arrow-lf{
+    margin-right:30px;
+}
+#news-arrow-rh{
+    margin-left:30px;
+}
+.news-content{
+    background-color:white;
+    width:370px;
+    height:520px;
+}
+.news-content .content{
+    padding-top:30px;
+    padding-left:20px;
+    width:340px;
+    overflow:hidden;
+}
+.news-content .content h4{
+    font-family:Gotham;
+    font-size:2.2rem;
+    font-weight:600;
+    margin-top:0;
+    margin-bottom:20px
+}
+.news-content .content p{
+    margin-top:0;
+    margin-bottom:20px;
+    font-family:'Microsoft YaHei UI';
+    font-size:1.6rem;
+    color:#626262;
+    line-height:1.5;
+}
+.news-content .content .author{
+    margin-top:30px;
+    display:flex;
+    height:60px;
+    justify-content:flex-start;
+    align-items:center;
+    text-align:left;
+}
+.news-content .content .author div{
+    margin-left:20px;
+}
+.news-content .content .author div h5{
+    font-family:Gotham;
+    font-size:1.8rem;
+    font-weight:normal;
+    padding:0;
+    margin:0;
+    line-height:1;
+    margin-bottom:10px;
+}
+.news-content .content .author div p{
+    padding:0;
+    margin:0;
+    line-height:1;
+    color:#55b7ff;
+    font-size:1.4rem;
+    font-family:Gotham;
+}
+.news-cover .center-content{
+    margin-left:25px;
+    margin-right:25px;
+}
+
+/*news dot栏设置*/
+.news .dot{
+    margin:100px auto 0;
+    width:300px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
+
+/*gallery区域设置*/
+.gallery{
+    position:relative;
+    z-index:0;
+}
+.gallery-container {
+    max-width: 1600px;
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+/*gallery标题区设置*/
+.gallery-title{
+    padding-top:50px;
+}
+.gallery-title .top-line{
+    border-top:1px solid #2c4058;
+    width:80px;
+    height:10px;
+    margin:0 auto;
+}
+.gallery-title h3{
+    font-size:4.4rem;
+    font-weight:600;
+    font-family:Gotham;
+    margin:20px 0 0 0;
+}
+/*gallery内容区设置*/
+.gallery-content{
+    display:flex;
+    align-items:flex-start;
+    margin-top:80px;
+    justify-content:center;
+}
+.gallery-content .gallery-big{
+    margin-right:9px;
+}
+.gallery-content .gallery-first{
+    margin-bottom:9px;
+}
+.gallery-content .gallery-first img,.gallery-content .gallery-second img{
+    margin-right:7px;
+    margin-left:0;
+}
+.gallery-content .gallery-second{
+    margin-top:0;
+}
+/*gallery按钮*/
+.gallery .button {
+    width: 190px;
+    height: 50px;
+    border: 1px solid #2c4058;
+    font-family: Gotham;
+    font-size: 1.4rem;
+    background: none;
+    text-decoration: none;
+    color: #2c4058;
+    display:block;
+    line-height:50px;
+    margin:50px auto;
+}
+.gallery .button:hover{
+    background:rgba(44,64,88,.2);
+}
+
+/*footer设置*/
+footer{
+    margin-top:200px;
+    position:relative;
+    z-index:0;
+}
+.footer-container {
+  margin-top: 190px;
+  z-index: 1;
+    max-width: 1170px;
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+#footer-bg{
+    position:absolute;
+    z-index:-1;
+    width:1920px;
+}
+.nav-title{
+  padding-top: 180px;
+    width:850px;
+    height:60px;
+    display:block;
+    margin:auto;
+    border-bottom:1px solid rgba(255, 255, 255, 0.44);
+}
+.nav-title ul{
+  padding-left: 0;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    list-style:none;
+}
+.nav-title a {
+    margin-left: 20px;
+    font-size: 1.4rem;
+    font-family: Gilroy;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.logo-ico{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.nav-icon{
+  padding-left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  height: 40px;
+  margin-right: 0;
+}
+.nav-icon li {
+    margin-left: 30px;
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.nav-icon img {
+    margin-top: 13px;
+}
+.footer-info{
+  text-align: left;
+  margin-left: 0;
+}
+.footer-info p{
+  font-size: 1.4rem;
+  color:white;
+  font-family: Gotham;
+  margin-top: 40px;
+  text-align: left;
+}
